@@ -81,7 +81,8 @@ export default function Nav() {
       
       res=>{
         
-        return(// console.log(res);
+        return(
+          console.log(res),
         value?setsearchdata(res.data.rows):null
         )
           

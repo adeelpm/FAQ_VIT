@@ -118,7 +118,7 @@ export default class content extends Component {
         await axios.get(`${API_URL}/api/category/${this.state.category}`,).then(
              res=>{
                 //  console.log(res)
-                 this.setState({data:res.data},()=>{console.log("statee data",this.state.data)})
+                 this.setState({data:res.data.rows},()=>{console.log("statee data",this.state.data)})
              }
          )
      }

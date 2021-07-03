@@ -19,6 +19,7 @@ import Box from '@material-ui/core/Box';
 
 import FixedColumnTable from './tablecomponent'
 import RequestTable from './rtablecomponent'
+import { API_URL } from '../env';
 
 
 
@@ -123,7 +124,7 @@ export default class index extends Component {
 
        
 
-        axios.post('http://localhost:5000/api/postqa', {qid:this.state.qid, question: this.state.question, answerStyled:this.state.answerStyled,answer: answer, category: this.state.category }).then(
+        axios.post(`${API_URL}/api/postqa`, {qid:this.state.qid, question: this.state.question, answerStyled:this.state.answerStyled,answer: answer, category: this.state.category }).then(
             res => {
                 console.log("postqa", res)
             }

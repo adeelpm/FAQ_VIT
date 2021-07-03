@@ -10,6 +10,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios'
 import Nav from './Nav.js'
+import { API_URL } from './env.js';
 
 
 
@@ -114,7 +115,7 @@ export default class content extends Component {
         console.log("cate",this.state.category)
 
         
-        await axios.get(`http://localhost:5000/api/category/${this.state.category}`,).then(
+        await axios.get(`${API_URL}/api/category/${this.state.category}`,).then(
              res=>{
                 //  console.log(res)
                  this.setState({data:res.data},()=>{console.log("statee data",this.state.data)})

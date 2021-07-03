@@ -5,6 +5,7 @@ import { Table } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css'
 //  'rsuite/lib/styles/index.less';
 import axios from 'axios'
+import { API_URL } from '../env';
 
 
 // data: [
@@ -72,7 +73,7 @@ export default class FixedColumnTable extends Component {
 
 
         
-       await axios.get('http://localhost:5000/api/all/0').then(
+       await axios.get(`${API_URL}/api/all/0`).then(
             res=>{
                 console.log(res)
                 this.setState({data:res.data})
@@ -172,7 +173,7 @@ export default class FixedColumnTable extends Component {
                     
 
                     const handleActiont=()=>{
-                      axios.delete(`http://localhost:5000/api/delete/${rowData.id}`).then(
+                      axios.delete(`${API_URL}/api/delete/${rowData.id}`).then(
                         res=>{
                             console.log(res)
                             this.getdatafromdb()

@@ -9,6 +9,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import axios from 'axios';
 import {Link} from 'react-router-dom'
 import { useHistory } from "react-router-dom";
+import { API_URL } from './env';
 
 
 export default function Nav() {
@@ -75,7 +76,7 @@ export default function Nav() {
 
     // await axios.get()
     console.log("searching ")
-    await axios.get(`http://localhost:5000/api/search/${value}`).then(
+    await axios.get(`${API_URL}/api/search/${value}`).then(
       res=>{
         
         return(// console.log(res);

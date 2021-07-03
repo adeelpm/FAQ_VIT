@@ -9,6 +9,7 @@ import { Form, Button } from 'react-bootstrap'
 import axios from 'axios'
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
+const {API_URL}=require('./env')
 
 
 
@@ -45,7 +46,7 @@ function App() {
 
   const onSubmitHandler=()=>{
 
-    axios.post('http://localhost:5000/api/postqa', {qid:0,quer:true, question: data.question,email:data.email ,type:1}).then(
+    axios.post(`${API_URL}/api/postqa`, {qid:0,quer:true, question: data.question,email:data.email ,type:1}).then(
             res => {
                 console.log("postqa", res)
                 setOpen(true)

@@ -76,7 +76,7 @@ export default class FixedColumnTable extends Component {
        await axios.get(`${API_URL}/api/all/0`).then(
             res=>{
                 console.log(res)
-                this.setState({data:res.data})
+                this.setState({data:res.data.rows})
             }
         )
     }

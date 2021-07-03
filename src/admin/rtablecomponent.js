@@ -76,7 +76,7 @@ export default class RequestTable extends Component {
        await axios.get(`${API_URL}/api/all/1`).then(
             res=>{
                 console.log(res)
-                this.setState({data:res.data})
+                this.setState({data:res.data.rows})
             }
         )
     }

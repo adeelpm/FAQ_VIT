@@ -76,7 +76,9 @@ export default function Nav() {
 
     // await axios.get()
     console.log("searching ")
+    console.log(`${API_URL}/api/search/${value}`);
     await axios.get(`${API_URL}/api/search/${value}`).then(
+      
       res=>{
         
         return(// console.log(res);

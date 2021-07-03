@@ -82,7 +82,7 @@ export default function Nav() {
       res=>{
         
         return(// console.log(res);
-        value?setsearchdata(res.data):null
+        value?setsearchdata(res.data.rows):null
         )
           
       }
